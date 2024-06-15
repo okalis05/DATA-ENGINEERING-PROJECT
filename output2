@@ -1,4 +1,4 @@
-Titles_ID,Title,Category,Date_Added,Rating
+Title_ID,Titles,Categories,Date_Added,Ratings
 tid1,Ganglands,TV Show,2021-09-24,TV-MA
 tid2,Midnight Mass,TV Show,2021-09-24,TV-MA
 tid3,My Little Pony: A New Generation,Movie,2021-09-24,PG

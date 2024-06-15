@@ -1,4 +1,4 @@
-Show_ID,Title,Category,Date_Added,Rating,Director,Actors
+Show_ID,Titles,Categories,Date_Added,Ratings,Directors,Actors
 s3,Ganglands,TV Show,2021-09-24,TV-MA,Julien Leclercq,"Sami Bouajila, Tracy Gotoas, Samuel Jouy, Nabiha Akkari, Sofia Lesaffre, Salim Kechiouche, Noureddine Farihi, Geert Van Rampelberg, Bakary Diombera"
 s6,Midnight Mass,TV Show,2021-09-24,TV-MA,Mike Flanagan,"Kate Siegel, Zach Gilford, Hamish Linklater, Henry Thomas, Kristin Lehman, Samantha Sloyan, Igby Rigney, Rahul Kohli, Annarah Cymone, Annabeth Gish, Alex Essoe, Rahul Abburi, Matt Biedel, Michael Trucco, Crystal Balint, Louis Oliver"
 s7,My Little Pony: A New Generation,Movie,2021-09-24,PG,"Robert Cullen, José Luis Ucha","Vanessa Hudgens, Kimiko Glenn, James Marsden, Sofia Carson, Liza Koshy, Ken Jeong, Elizabeth Perkins, Jane Krakowski, Michael McKean, Phil LaMarr"

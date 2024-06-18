@@ -1,0 +1,81 @@
+digraph G {
+        graph [
+            nodesep=0.5;
+            rankdir="LR";
+            cencentrate=true;
+            splines="spline";
+            fontname="Helvetica";
+            pad="0.2,0.2",
+            label="",
+
+        ];
+
+        node [shape=plain, fontname="Helvetica"];
+        edge [
+            dir=both,
+            fontsize=12,
+            arrowsize=0.9,
+            penwidth=1.0,
+            labelangle=32,
+            labeldistance=1.8,
+            fontname="Helvetica"
+        ];
+
+	 netflix [ label=<
+        <table border="0" cellborder="1" cellspacing="0">
+        <tr><td bgcolor="gold"><b>netflix</b></td></tr>
+        
+		<tr><td port="Show_ID" align="left" cellpadding="5">Show_ID <font color="grey60">object</font></td></tr>
+		<tr><td port="Titles" align="left" cellpadding="5">Titles <font color="grey60">object</font></td></tr>
+		<tr><td port="Categories" align="left" cellpadding="5">Categories <font color="grey60">object</font></td></tr>
+		<tr><td port="Date_Added" align="left" cellpadding="5">Date_Added <font color="grey60">object</font></td></tr>
+		<tr><td port="Ratings" align="left" cellpadding="5">Ratings <font color="grey60">object</font></td></tr>
+		<tr><td port="Directors" align="left" cellpadding="5">Directors <font color="grey60">object</font></td></tr>
+		<tr><td port="Description" align="left" cellpadding="5">Description <font color="grey60">object</font></td></tr>
+		</table>>];
+
+	 movie [ label=<
+        <table border="0" cellborder="1" cellspacing="0">
+        <tr><td bgcolor="skyblue"><b>movie</b></td></tr>
+        
+		<tr><td port="Title_ID" align="left" cellpadding="5">Title_ID <font color="grey60">object</font></td></tr>
+		<tr><td port="Titles" align="left" cellpadding="5">Titles <font color="grey60">object</font></td></tr>
+		<tr><td port="Categories" align="left" cellpadding="5">Categories <font color="grey60">object</font></td></tr>
+		<tr><td port="Date_Added" align="left" cellpadding="5">Date_Added <font color="grey60">object</font></td></tr>
+		<tr><td port="Ratings" align="left" cellpadding="5">Ratings <font color="grey60">object</font></td></tr>
+		<tr><td port="Description" align="left" cellpadding="5">Description <font color="grey60">object</font></td></tr>
+		</table>>];
+
+	 titles [ label=<
+        <table border="0" cellborder="1" cellspacing="0">
+        <tr><td bgcolor="lightblue"><b>titles</b></td></tr>
+        
+		<tr><td port="Show_ID" align="left" cellpadding="5">Show_ID <font color="grey60">object</font></td></tr>
+		<tr><td port="Title_ID" align="left" cellpadding="5">Title_ID <font color="grey60">object</font></td></tr>
+		<tr><td port="Categories" align="left" cellpadding="5">Categories <font color="grey60">object</font></td></tr>
+		<tr><td port="Titles" align="left" cellpadding="5">Titles <font color="grey60">object</font></td></tr>
+		</table>>];
+
+	 director [ label=<
+        <table border="0" cellborder="1" cellspacing="0">
+        <tr><td bgcolor="lightyellow"><b>director</b></td></tr>
+        
+		<tr><td port="IDs" align="left" cellpadding="5">IDs <font color="grey60">object</font></td></tr>
+		<tr><td port="Titles" align="left" cellpadding="5">Titles <font color="grey60">object</font></td></tr>
+		<tr><td port="First_Name" align="left" cellpadding="5">First_Name <font color="grey60">object</font></td></tr>
+		<tr><td port="Last_Name" align="left" cellpadding="5">Last_Name <font color="grey60">object</font></td></tr>
+		<tr><td port="Show_ID" align="left" cellpadding="5">Show_ID <font color="grey60">object</font></td></tr>
+		<tr><td port="Ratings" align="left" cellpadding="5">Ratings <font color="grey60">object</font></td></tr>
+		<tr><td port="Categories" align="left" cellpadding="5">Categories <font color="grey60">object</font></td></tr>
+		<tr><td port="Date_Added" align="left" cellpadding="5">Date_Added <font color="grey60">object</font></td></tr>
+		</table>>];
+
+	 netflix:Show_ID->director:Show_ID [ 
+                        arrowhead=ocrow, arrowtail=noneotee];
+
+	 netflix:Show_ID->titles:Show_ID [ 
+                        arrowhead=noneotee, arrowtail=noneotee];
+
+	 movie:Title_ID->titles:Title_ID [ 
+                        arrowhead=noneotee, arrowtail=noneotee];
+	}

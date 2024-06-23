@@ -55,6 +55,7 @@ Netflix is a streaming application that is very popular with all generations. Ne
 Special thanks to our instructional team for their guidance in deciding which library suited our needs best. 
 
 Data: https://www.kaggle.com/datasets/shivamb/netflix-shows/data	
+
 Image: https://sql.sh/wp-content/uploads/2014/04/sqlite-sgbd-500px.png
 
 

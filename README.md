@@ -51,13 +51,11 @@ The second ethical consideration was referencing for data source(s) and any code
 ## SUMMARY  
 Netflix is a streaming application that is very popular with all generations. Netflix allows users to access a very diverse selection of local and international movies and films. The objective of this project is to include data cleansing and organization, analysis, and engineering. We will import data from kaggle.com, design the tables to hold the data from the CSV files, and import the CSV files into an SQL database. In summary, diligent referencing for data sources and external code is essential for ethical research practices, ensuring that the contributions of others are properly acknowledged and that our work can be trusted and verified by the wider community.
 
-## REFERENCES
-Special thanks to our instructional team for their guidance in deciding which library suited our needs best.
+## REFERENCES AND METADATA    
+Special thanks to our instructional team for their guidance in deciding which library suited our needs best. 
 
-## SOURCE'S METADATA 
 Data: https://www.kaggle.com/datasets/shivamb/netflix-shows/data	
-Image:
-https://sql.sh/wp-content/uploads/2014/04/sqlite-sgbd-500px.png
+Image: https://sql.sh/wp-content/uploads/2014/04/sqlite-sgbd-500px.png
 
 
 
@@ -109,8 +107,6 @@ https://sql.sh/wp-content/uploads/2014/04/sqlite-sgbd-500px.png
 
 
 
-*** References and Metadata ***
-Thanks to kaggle.com we were able to get a csv file named netflix_titles_csv.
 
 
 
@@ -124,4 +120,4 @@ Thanks to kaggle.com we were able to get a csv file named netflix_titles_csv.
 
 
 
-*** Note to Collaborators ***
+

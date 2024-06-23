@@ -21,17 +21,14 @@ for its complexity and diversity, allowing us to showcase our ETL workflow
 skillset.
 
 ## OBJECTIVES
-For this track, our group choose the data engineering track. We are tasked with following:
+For this track, our group choose the data engineering track. We are tasked with the following:
 1 - Find a dataset that contains at least 100 records.
 2 - Design an ETL workflows to ingest data in a SQL or NoSQL database (PostgreSQL, MongoDB, SQLite, etc). 
 3 - Design a Flask Api app with JSON output to facilitate user's interactions with our work materials
 4 - Research a library not covered in class related to data engineering. 
 
-
 ## USER'S INTERACTIONS
-We designed a flask app to facilitate user's interaction with our project .The flask app is a combination of 4 different routes referencing each table in our database.We shared a link to our git repository which users can follow and get access to our work material.Once in there ,
-
-## SOURCE'S METADATA 
+We designed a flask app to facilitate user's interaction with our project. The flask app is a combination of 4 different routes referencing each table in our database. We shared a link to our git repository which users can follow and get access to our work material.
 
 ## WHY SQLite?
 We choose to use SQLite for various reasons:
@@ -57,10 +54,9 @@ Netflix is a streaming application that is very popular with all generations. Ne
 ## REFERENCES
 Special thanks to our instructional team for their guidance in deciding which library suited our needs best.
 
-
-Data Source: https://www.kaggle.com/datasets/shivamb/netflix-shows/data	
-
-Image Source:
+## SOURCE'S METADATA 
+Data: https://www.kaggle.com/datasets/shivamb/netflix-shows/data	
+Image:
 https://sql.sh/wp-content/uploads/2014/04/sqlite-sgbd-500px.png
 
 

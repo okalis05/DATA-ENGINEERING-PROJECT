@@ -3,9 +3,9 @@
 ## PROJECT 3
 
 ## Team Members: 
-Francoise Elis Mbazoa okala:
-Kiwaski Nix:
-Mina Agyen and
+Elis okala -
+Kiwaski Nix -
+Mina Agyen -
 Monique Reid 
 
 ## PROJECT OVERVIEW 

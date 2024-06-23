@@ -3,12 +3,12 @@
 ## PROJECT 3
 
 ## Team Members: 
-Francoise Elis Mbazoa okala
-Kiwaski Nix
-Mina Agyen
+Francoise Elis Mbazoa okala:
+Kiwaski Nix:
+Mina Agyen and
 Monique Reid 
 
-## --- PROJECT OVERVIEW 
+## PROJECT OVERVIEW 
 As we move into summer, the need for in-home entertainment is at an all-
 time high. Families have gathered around the television (TV) for decades to 
 enjoy movies or shows. With the introduction of companies like Netflix, 

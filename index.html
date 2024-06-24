@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=chrome">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./index_files/style.css">
+    </head>
+    <body><img src="./index_files/banner.png" alt="image of our favorite libraries" width="1500" height="250">
+    
+       <section>
+        <div class="menu-container">
+          <button class="menu-button" onclick="toggleMenu()"> </button>
+          <div class="menu" id="menu">
+            <a href="file:///Users/francoiseelismbazoaokala/Documents/projects/DATA-ENGINEERING-PROJECT/index.html#Introduction">Introduction</a>
+            <a href="file:///Users/francoiseelismbazoaokala/Documents/projects/DATA-ENGINEERING-PROJECT/index.html#about">About</a>
+            <a href="file:///Users/francoiseelismbazoaokala/Documents/projects/DATA-ENGINEERING-PROJECT/index.html#Conclusion">Conclusion</a>
+          </div>
+        </div>
+      <h1>DATA ENGINEERING PROJECT</h1>
+            <h2>Building of an ETL Workflow to ingest Data into SQLite Database</h2>
+            <h2>PRESENTATION</h2>
+                <p> For the presentation , we created a webpage to add some visuals to our work.We came to the understanding that since we weren't going to do any visualization, our presentation was going to lack some of the sparks that a good graph can bring. Therefore we used HTML to create a webpage ,then used CSS for its beautification.</p>
+        </div>
+            
+                <h2> EXTRACTION and STANDARDIZATION</h2>
+      <img class="image" src="./index_files/1200px-Jupyter_logo.svg.png" alt="jupiter" width="200" height="150">
+      <img class="image" src="./index_files/Python-logo-notext.svg.png" width="200" height="150">
+               <h3>Why Netflix-titles_csv file?</h3>
+              <p>We chose to work with this dataset for three reasons:</p>
+                <ol>
+                  <li>Ethical considerations</li>
+                  <p>
+                     Although there are some PII (Personal Identifiable Information) in the dataset,<br/>
+                    specially in the "director " and "cast" columns,those relate to public figures and <br/>the information is limited to just names which can't be used to cause any prejudices,<br/>
+                     thus allows us to stay within ethical boundaries.
+                  </p>
+                  <li>Meets the criteria necessary to showcase the ETL processes</li>
+                    <ul>
+                      <li>Dataset had a lot of irregularities.From missing values , unstructured columns<br/>
+                        ('country' and 'duration'),date_added column with mixed format ,it was the perfect <br/>
+                         fit to showcase data cleaning
+                      </li>
+                      <li>Large enough to meet the project requirement:There were 12 columns and 8807 rows <br/>
+                         in our dataset which exceed the required 100 rows for this project</li>
+                      <li>Diverse enough , allowing us to pick it apart and create various dataframes</li>
+                    </ul>
+                    <li>Dataset is readily available in the public domain</li>
+               </ol>
+               <p>All we had to do was to import pandas and pathlib libraries to read netflix_titles.csv file into<br/>
+                 a Jupiter notebook and start the cleaning process .</p>
+              <p>
+              </p>
+            <h2>TRANSFORMATION</h2>
+     <img class="image" src="./index_files/Pandas_logo.svg.png" width="200" height="150">
+  <img class="image" src="./index_files/Python-logo-notext.svg.png" width="200" height="150">
+      <img class="image" src="./index_files/240px-NumPy_logo_2020.svg.png" alt="numpy">
+              <h4>Creation of Netflix_df dataframe</h4>
+                <p>In this sectiom , we started off by importing pandas ,datetime ,numpy and 're' in a jupiter notebook .Then started the cleaning process of,</p>
+                <ul>
+                  <li>Removing all null values</li>
+                  <li>Dropping unwanted columns which was either unstructured example('country' , 'listed_in','duration'and 'year_release') column or presented some ambiguities</li>
+                  <li>Removing duplicated values in the Show_ID column</li>
+                  <li>Formatting the "date_added" which had mixed characters for example ('2021-sept-09") and put it in  a python friendly format like ('2021-09-09').</li>
+                  <li>Renaming ,re-organizing and capitalizing all columns for a more appealing display </li>
+                </ul>
+                <p>All these steps resulted in the creation of a polished version of our initial dataset which we saved as "netflix_df" as shown below.</p>
+                  <img class="work" id="frame" src="./index_files/Screenshot 2024-06-22 at 9.08.50 AM.png" width="1200" height="250">
+                  <h4>Creation of the movie_df dataframe</h4>
+                     <p>The purpose of this dataframe was to put an emphasis on the movies and shows streamed on the netflix</p>
+                      <ul>For that reason,
+                        <li>We copied the netflix_df dataframe and extracted the columns of interest('Type','Title','Category','Date_Added','Rating','Description')</li>
+                        <li>Then,using numpy array and list comprehension, we created a title_id column </li>
+                        <li>Finally we appended the Title_ID to the dataframe and saved the result as movie_df which is shown below</li>
+                      </ul>
+                  <img class="work" id="frame" src="./index_files/Screenshot 2024-06-22 at 9.11.29 AM.png" width="1200" height="250">
+                  <h4>Creation of the title_df dataframe</h4>
+                     <p> The title_df dataframe came about as a way to create a bridge or a relationship between our next 
+                       dataframe and the movie_df .To create it,</p>
+                       <ul>
+                        <li>We copied netflix_df and title_df and merged both on the "Title" column.</li>
+                        <li>Then extracted the columns('Show_ID','Title_ID','Title','Type').</li>
+                        <li>AFter re_ordering the columns we saved it title_df in a csv file as the image below shows.</li>
+                       </ul>
+                         <img class="work" id="frame" src="./index_files/Screenshot 2024-06-22 at 9.12.34 AM.png" width="1200" height="250">
+                  <h4>Creation of the director_df dataframe</h4>
+                      <p>With this dataframe, we wanted to put the emphasis on the movie's directors and their work 
+                        and where they stand in the ratings.</p>
+                        <ul>
+                          <li>We started by copying the netflix_df</li>
+                          <li> then extracting the columns('Show_ID','Title','Rating','Date_Added','Director').</li>
+                          <li>After that ,we used "Regular Expression" to extract the "First_name and"Last_name from the "Director's column</li> 
+                          <li>We appended the new columns to the dataframe and dropped the Director column</li>                   
+                          <li>Finally we used "numpy array" and "list comprehension" to create the "IDs" ccolumn and saved it as director_df</li>
+                        </ul>   
+                <img class="work" id="frame" src="./index_files/Screenshot 2024-06-22 at 9.13.58 AM.png" width="1200" height="250">
+            <h2>LOADING DATA IN TO SQLITE DATABASE</h2>
+              <div>
+                <img class="image" src="./index_files/sqlite-sgbd-500px.png" width="500" height="250">
+                <h3>Why SQLITE database?</h3>
+                <p>We choose to use SQLite for various reasons:</p>
+                <ul>
+                  <li>Open source and free: SQLite is accessible to developers of all levels.</li>
+                  <li> Serverless: SQLite doesn't require a separate database server, which can eliminate the need for complex configurations and make it cheaper for smaller projects like ours.</li> 
+                  <li> Multiple instances: Multiple instances of the same app can run simultaneously without issue.</li>
+                  <li>Data transfer: SQLite databases can facilitate data transfer between systems. Given that we were going to transfer to flask to allow users interactions, SQLite is the right fits for our needs.
+                  </li>              
+                </ul>
+                         
+                <h3>Create, Read ,Update and Delete(CRUD)</h3>
+                   <p>
+                     <img class="work" src="./index_files/Screenshot 2024-06-22 at 9.15.33 AM.png" width="300" height="350">
+                     <img class="work" src="./index_files/Screenshot 2024-06-22 at 9.16.19 AM.png" width="300" height="350">
+                     <img class="work" src="./index_files/Screenshot 2024-06-22 at 9.18.11 AM.png" width="500" height="350">
+                     <img class="work" src="./index_files/Screenshot 2024-06-22 at 9.19.12 AM.png" width="300" height="350">            
+                    </p>
+                   <p>In order to Ingest our datframes to the database , we did some CRUD operation.</p>
+                   <ul>
+                    <li>First we imported the necessary libraries from SQLalchemy</li>
+                    <li>Then we created some class objects namely 'Director','Movie','Netflix' and 'Title'.</li>
+                    <li>After that we called the constructor to create one instance of each class</li>
+                    <li>Finally we established a connection with sqlite and created our collections into a database named "streaming"</li>
+                   <p>with some hiccups along the way we had to do some updates and deletion until we get the confirmation ,through a query test that our tables were successfully loaded in to our database.</p>
+                  </ul>
+                <h3>Entity Relationship Diagram</h3>
+                   <p>
+                     <img class="work" src="./index_files/Screenshot 2024-06-22 at 11.12.54 AM.png" width="500" height="250">
+                     <img class="work" src="./index_files/Screenshot 2024-06-22 at 9.20.13 AM.png" width="500" height="250">
+                    </p><p>As part of this project, we were tasked with using a library not discussed in class.To meet
+                     that requirement, we chose Pandas_erd as the library to create our ERD  dataframes.
+                     The following steps outline how to use this library.
+                     </p><ol>
+                       <li>In a jupiter notebook,create an ERD object and add tables and connections between tables</li>
+                       <li>save the generated dot code to an output.txt file contained in the same folder as your notebook</li>
+                       <li>copy-paste the output.txt into a graphviz rendering tool like this edoto
+                       </li><li>the output image at the bottom is generated by using the above link</li>
+                    </ol>
+                   <p></p>
+              </div>
+              <div>
+                <h2>USERS INTERACTION</h2>
+                <img class="image" src="./index_files/Screenshot 2024-06-22 at 12.01.33 PM.png" width="500" height="250">
+                <img class="image" src="./index_files/Screenshot 2024-06-22 at 12.00.27 PM.png" width="500" height="250">
+                   <p>We designed a flask App to facilitate user's interaction with our project .The flask App is a combination of 4 different routes referencing each table  in our database.We shared the link to our git repository which users can follow and get access to our work materials.Once in there ,
+They can choose to run the app and query the data  or get the files directly from the repository.
+              </p></div>
+              <div>
+                <h2>Challenges and Solutions</h2>
+                <p>we faced some manor challenges during the completion of this project and used some of collective skills and address them.</p>
+                 <ol>
+                  <li>The first challenge was in regards to the dataset . It presented some limitations for us as we could not figure out a good way to define foreign keys to elaborate more on the table's relationships.For that reason, we we were comforted in our choice to  use Pandas_erd to define our ERD. </li>
+                  <li>The second challenge was to make time outside of class to work on the project together as dealing with work/life balance kind of got on the way.For that reason we had to burn some midnight oil to get through the project.</li>
+                  <li>Dealing with some members illnesses which really slowed us down as we had to be considerate of our team wellbeing.</li>
+                 </ol>
+              </div>
+
+                <h2>CONCLUSION</h2>
+                   <p>In summary , we retrieved a CSV file from Kaggle, loaded it into Jupyter 
+                    Notebook, cleaned and transformed the data, resulting in the creation of 
+                    four dataframes. We created an ERD and finally loaded everything into an 
+                    SQLite database named "Streaming" . This project was a great opportunity to pause and evaluate the skills learned in class so far.Through it we were able to             
+      revisit almost all the modules covered so far with just a few exceptions. It also helped us assess our job readiness and confidence as we move closer to the end of the bootcamp.
+
+                   </p>
+                <h3>References</h3>
+                   <p>
+                Github:<a href="https://github.com/okalis05/DATA-ENGINEERING-PROJECT.git">link to our                                 Github repository</a><br>
+                Source:<a href="./index_files/sqlite-sgbd-500px.png">Link to our images ' source</a> <br>
+                Data Source:<a href="https://www.kaggle.com/datasets/shivamb/netflix-shows/data">Link to our data source</a>
+                   </p>
+         </section> 
+
+              
+<img src="./index_files/banner.jpg" alt="static image" width="1400" height="100">
+
+
+
+    
+    
+</body></html>

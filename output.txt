@@ -26,11 +26,12 @@ digraph G {
         <tr><td bgcolor="gold"><b>netflix</b></td></tr>
         
 		<tr><td port="Show_ID" align="left" cellpadding="5">Show_ID <font color="grey60">object</font></td></tr>
-		<tr><td port="Titles" align="left" cellpadding="5">Titles <font color="grey60">object</font></td></tr>
-		<tr><td port="Categories" align="left" cellpadding="5">Categories <font color="grey60">object</font></td></tr>
+		<tr><td port="Type" align="left" cellpadding="5">Type <font color="grey60">object</font></td></tr>
+		<tr><td port="Title" align="left" cellpadding="5">Title <font color="grey60">object</font></td></tr>
+		<tr><td port="Category" align="left" cellpadding="5">Category <font color="grey60">object</font></td></tr>
 		<tr><td port="Date_Added" align="left" cellpadding="5">Date_Added <font color="grey60">object</font></td></tr>
-		<tr><td port="Ratings" align="left" cellpadding="5">Ratings <font color="grey60">object</font></td></tr>
-		<tr><td port="Directors" align="left" cellpadding="5">Directors <font color="grey60">object</font></td></tr>
+		<tr><td port="Rating" align="left" cellpadding="5">Rating <font color="grey60">object</font></td></tr>
+		<tr><td port="Director" align="left" cellpadding="5">Director <font color="grey60">object</font></td></tr>
 		<tr><td port="Description" align="left" cellpadding="5">Description <font color="grey60">object</font></td></tr>
 		</table>>];
 
@@ -39,43 +40,43 @@ digraph G {
         <tr><td bgcolor="skyblue"><b>movie</b></td></tr>
         
 		<tr><td port="Title_ID" align="left" cellpadding="5">Title_ID <font color="grey60">object</font></td></tr>
-		<tr><td port="Titles" align="left" cellpadding="5">Titles <font color="grey60">object</font></td></tr>
-		<tr><td port="Categories" align="left" cellpadding="5">Categories <font color="grey60">object</font></td></tr>
+		<tr><td port="Title" align="left" cellpadding="5">Title <font color="grey60">object</font></td></tr>
+		<tr><td port="Type" align="left" cellpadding="5">Type <font color="grey60">object</font></td></tr>
+		<tr><td port="Category" align="left" cellpadding="5">Category <font color="grey60">object</font></td></tr>
 		<tr><td port="Date_Added" align="left" cellpadding="5">Date_Added <font color="grey60">object</font></td></tr>
-		<tr><td port="Ratings" align="left" cellpadding="5">Ratings <font color="grey60">object</font></td></tr>
+		<tr><td port="Rating" align="left" cellpadding="5">Rating <font color="grey60">object</font></td></tr>
 		<tr><td port="Description" align="left" cellpadding="5">Description <font color="grey60">object</font></td></tr>
 		</table>>];
 
-	 titles [ label=<
+	 title [ label=<
         <table border="0" cellborder="1" cellspacing="0">
-        <tr><td bgcolor="lightblue"><b>titles</b></td></tr>
+        <tr><td bgcolor="lightblue"><b>title</b></td></tr>
         
 		<tr><td port="Show_ID" align="left" cellpadding="5">Show_ID <font color="grey60">object</font></td></tr>
 		<tr><td port="Title_ID" align="left" cellpadding="5">Title_ID <font color="grey60">object</font></td></tr>
-		<tr><td port="Categories" align="left" cellpadding="5">Categories <font color="grey60">object</font></td></tr>
-		<tr><td port="Titles" align="left" cellpadding="5">Titles <font color="grey60">object</font></td></tr>
+		<tr><td port="Title" align="left" cellpadding="5">Title <font color="grey60">object</font></td></tr>
+		<tr><td port="Type" align="left" cellpadding="5">Type <font color="grey60">object</font></td></tr>
 		</table>>];
 
 	 director [ label=<
         <table border="0" cellborder="1" cellspacing="0">
         <tr><td bgcolor="lightyellow"><b>director</b></td></tr>
         
+		<tr><td port="Show_ID" align="left" cellpadding="5">Show_ID <font color="grey60">object</font></td></tr>
+		<tr><td port="Title" align="left" cellpadding="5">Title <font color="grey60">object</font></td></tr>
+		<tr><td port="Date_Added" align="left" cellpadding="5">Date_Added <font color="grey60">object</font></td></tr>
+		<tr><td port="Rating" align="left" cellpadding="5">Rating <font color="grey60">object</font></td></tr>
 		<tr><td port="IDs" align="left" cellpadding="5">IDs <font color="grey60">object</font></td></tr>
-		<tr><td port="Titles" align="left" cellpadding="5">Titles <font color="grey60">object</font></td></tr>
 		<tr><td port="First_Name" align="left" cellpadding="5">First_Name <font color="grey60">object</font></td></tr>
 		<tr><td port="Last_Name" align="left" cellpadding="5">Last_Name <font color="grey60">object</font></td></tr>
-		<tr><td port="Show_ID" align="left" cellpadding="5">Show_ID <font color="grey60">object</font></td></tr>
-		<tr><td port="Ratings" align="left" cellpadding="5">Ratings <font color="grey60">object</font></td></tr>
-		<tr><td port="Categories" align="left" cellpadding="5">Categories <font color="grey60">object</font></td></tr>
-		<tr><td port="Date_Added" align="left" cellpadding="5">Date_Added <font color="grey60">object</font></td></tr>
 		</table>>];
 
 	 netflix:Show_ID->director:Show_ID [ 
-                        arrowhead=ocrow, arrowtail=noneotee];
+                        arrowhead=noneotee, arrowtail=ocrow];
 
-	 netflix:Show_ID->titles:Show_ID [ 
+	 netflix:Show_ID->title:Show_ID [ 
                         arrowhead=noneotee, arrowtail=noneotee];
 
-	 movie:Title_ID->titles:Title_ID [ 
+	 movie:Title_ID->title:Title_ID [ 
                         arrowhead=noneotee, arrowtail=noneotee];
 	}

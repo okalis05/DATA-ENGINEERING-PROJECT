@@ -1,0 +1,19 @@
+h1 { background-color:hsl(208, 80%, 85%);padding:30px;color:blue ; border:solid ;margin-left:380px;margin-right:400px;box-shadow:10px 10px 10px }
+h2 {text-decoration:underline;}
+body {font-size:20px;font-family:Aptos}
+.work {border:solid rgb(244, 55, 55);box-shadow:5px 5px 5px ;border-radius:30px;}
+h2{text-align:center;}
+.image {border:solid #9f3602;background-color:#E8F1F8;border-radius:360px;}
+section { background-color:rgb(147, 180, 197);}
+ol,ul {background-color:rgb(rgb(192, 192, 247))}
+#law {background-image: url("https://images.app.goo.gl/3AdAmL71ELDjY6Bj8");
+background-size: cover;background-position: center;background-repeat: no-repeat;padding: 20px;}
+h3 {text-decoration: underline;}
+#frame {margin-left:150px}
+h4 {border:solid white;color:white;text-align: center;margin-left:500px ;margin-right:500px;box-shadow:10px 10px 10px 10px}
+.menu-container {position: relative;}
+.menu-button {font-size: 24px;cursor: pointer;padding: 10px 15px ;border:none;background-color: #333;color: white;}
+.menu {display: none;position: absolute;top: 40px;left: 0;background-color: #333;box-shadow: 0 8px 16px rgba(0,0,0,0.2);z-index:1;}
+.menu a:hover { background-color: #575757;}
+.menu a {display: block;color: white;padding: 12px 16px;text-decoration: none;}
+body {font-family:monospace 'new courier';}

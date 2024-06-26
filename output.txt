@@ -25,50 +25,50 @@ digraph G {
         <table border="0" cellborder="1" cellspacing="0">
         <tr><td bgcolor="gold"><b>netflix</b></td></tr>
         
-		<tr><td port="Show_ID" align="left" cellpadding="5">Show_ID <font color="grey60">object</font></td></tr>
-		<tr><td port="Type" align="left" cellpadding="5">Type <font color="grey60">object</font></td></tr>
-		<tr><td port="Title" align="left" cellpadding="5">Title <font color="grey60">object</font></td></tr>
-		<tr><td port="Category" align="left" cellpadding="5">Category <font color="grey60">object</font></td></tr>
-		<tr><td port="Date_Added" align="left" cellpadding="5">Date_Added <font color="grey60">object</font></td></tr>
-		<tr><td port="Rating" align="left" cellpadding="5">Rating <font color="grey60">object</font></td></tr>
-		<tr><td port="Director" align="left" cellpadding="5">Director <font color="grey60">object</font></td></tr>
-		<tr><td port="Description" align="left" cellpadding="5">Description <font color="grey60">object</font></td></tr>
+		<tr><td port="Show_ID" align="left" cellpadding="5">Show_ID <font color="grey60">string pk</font></td></tr>
+		<tr><td port="Type" align="left" cellpadding="5">Type <font color="grey60">string</font></td></tr>
+		<tr><td port="Title" align="left" cellpadding="5">Title <font color="grey60">string</font></td></tr>
+		<tr><td port="Category" align="left" cellpadding="5">Category <font color="grey60">string</font></td></tr>
+		<tr><td port="Date_Added" align="left" cellpadding="5">Date_Added <font color="grey60">date</font></td></tr>
+		<tr><td port="Rating" align="left" cellpadding="5">Rating <font color="grey60">string</font></td></tr>
+		<tr><td port="Director" align="left" cellpadding="5">Director <font color="grey60">string</font></td></tr>
+		<tr><td port="Description" align="left" cellpadding="5">Description <font color="grey60">string</font></td></tr>
 		</table>>];
 
 	 movie [ label=<
         <table border="0" cellborder="1" cellspacing="0">
         <tr><td bgcolor="skyblue"><b>movie</b></td></tr>
         
-		<tr><td port="Title_ID" align="left" cellpadding="5">Title_ID <font color="grey60">object</font></td></tr>
-		<tr><td port="Title" align="left" cellpadding="5">Title <font color="grey60">object</font></td></tr>
-		<tr><td port="Type" align="left" cellpadding="5">Type <font color="grey60">object</font></td></tr>
-		<tr><td port="Category" align="left" cellpadding="5">Category <font color="grey60">object</font></td></tr>
-		<tr><td port="Date_Added" align="left" cellpadding="5">Date_Added <font color="grey60">object</font></td></tr>
-		<tr><td port="Rating" align="left" cellpadding="5">Rating <font color="grey60">object</font></td></tr>
-		<tr><td port="Description" align="left" cellpadding="5">Description <font color="grey60">object</font></td></tr>
+		<tr><td port="Title_ID" align="left" cellpadding="5">Title_ID <font color="grey60">string pk</font></td></tr>
+		<tr><td port="Title" align="left" cellpadding="5">Title <font color="grey60">string</font></td></tr>
+		<tr><td port="Type" align="left" cellpadding="5">Type <font color="grey60">string</font></td></tr>
+		<tr><td port="Category" align="left" cellpadding="5">Category <font color="grey60">string</font></td></tr>
+		<tr><td port="Date_Added" align="left" cellpadding="5">Date_Added <font color="grey60">date</font></td></tr>
+		<tr><td port="Rating" align="left" cellpadding="5">Rating <font color="grey60">string</font></td></tr>
+		<tr><td port="Description" align="left" cellpadding="5">Description <font color="grey60">string</font></td></tr>
 		</table>>];
 
 	 title [ label=<
         <table border="0" cellborder="1" cellspacing="0">
         <tr><td bgcolor="lightblue"><b>title</b></td></tr>
         
-		<tr><td port="Show_ID" align="left" cellpadding="5">Show_ID <font color="grey60">object</font></td></tr>
-		<tr><td port="Title_ID" align="left" cellpadding="5">Title_ID <font color="grey60">object</font></td></tr>
-		<tr><td port="Title" align="left" cellpadding="5">Title <font color="grey60">object</font></td></tr>
-		<tr><td port="Type" align="left" cellpadding="5">Type <font color="grey60">object</font></td></tr>
+		<tr><td port="Show_ID" align="left" cellpadding="5">Show_ID <font color="grey60">string</font></td></tr>
+		<tr><td port="Title_ID" align="left" cellpadding="5">Title_ID <font color="grey60">string pk</font></td></tr>
+		<tr><td port="Title" align="left" cellpadding="5">Title <font color="grey60">string</font></td></tr>
+		<tr><td port="Type" align="left" cellpadding="5">Type <font color="grey60">string</font></td></tr>
 		</table>>];
 
 	 director [ label=<
         <table border="0" cellborder="1" cellspacing="0">
         <tr><td bgcolor="lightyellow"><b>director</b></td></tr>
         
-		<tr><td port="Show_ID" align="left" cellpadding="5">Show_ID <font color="grey60">object</font></td></tr>
-		<tr><td port="Title" align="left" cellpadding="5">Title <font color="grey60">object</font></td></tr>
-		<tr><td port="Date_Added" align="left" cellpadding="5">Date_Added <font color="grey60">object</font></td></tr>
-		<tr><td port="Rating" align="left" cellpadding="5">Rating <font color="grey60">object</font></td></tr>
-		<tr><td port="IDs" align="left" cellpadding="5">IDs <font color="grey60">object</font></td></tr>
-		<tr><td port="First_Name" align="left" cellpadding="5">First_Name <font color="grey60">object</font></td></tr>
-		<tr><td port="Last_Name" align="left" cellpadding="5">Last_Name <font color="grey60">object</font></td></tr>
+		<tr><td port="Show_ID" align="left" cellpadding="5">Show_ID <font color="grey60">string</font></td></tr>
+		<tr><td port="Title" align="left" cellpadding="5">Title <font color="grey60">string</font></td></tr>
+		<tr><td port="Date_Added" align="left" cellpadding="5">Date_Added <font color="grey60">date</font></td></tr>
+		<tr><td port="Rating" align="left" cellpadding="5">Rating <font color="grey60">string</font></td></tr>
+		<tr><td port="IDs" align="left" cellpadding="5">IDs <font color="grey60">int</font></td></tr>
+		<tr><td port="First_Name" align="left" cellpadding="5">First_Name <font color="grey60">string</font></td></tr>
+		<tr><td port="Last_Name" align="left" cellpadding="5">Last_Name <font color="grey60">string</font></td></tr>
 		</table>>];
 
 	 netflix:Show_ID->director:Show_ID [ 
